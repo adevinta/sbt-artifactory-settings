@@ -24,10 +24,11 @@ install:
 script:
   - sbt ++$TRAVIS_SCALA_VERSION clean scalastyle test:scalastyle coverage test coverageReport scripted
 
-before_deploy:
+before_script:
   - if [ $TRAVIS_PULL_REQUEST = 'false' ]; then
       openssl aes-256-cbc -K $encrypted_82c15cb04022_key -iv $encrypted_82c15cb04022_iv -in secring.asc.enc -out secring.asc -d;
-      gpg --import secring.asc;
+      gpg --batch --import secring.asc;
+      gpg --list-secret;
       rm secring.asc;
     fi
 
