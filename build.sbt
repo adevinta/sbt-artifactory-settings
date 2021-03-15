@@ -3,7 +3,7 @@ import sbt.ScriptedPlugin.autoImport.scriptedBufferLog
 inThisBuild(Seq(
   
   name := "prometheus-datadog-bridge",
-  organization := "com.adevinta.unicron",
+  organization := "com.github.adevinta.unicron",
   description := "SBT plugin to manage Artifactory configuration",
   
   licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html")),
@@ -16,8 +16,8 @@ inThisBuild(Seq(
 
   usePgpKeyHex("E362921A4CE8BD97916B06CEC6DDC7B1869C9349"),
 
-  // sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
-  // sonatypeCredentialHost:= "s01.oss.sonatype.org",
+  sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
+  sonatypeCredentialHost:= "s01.oss.sonatype.org",
   dynverSonatypeSnapshots := true,
 ))
 
