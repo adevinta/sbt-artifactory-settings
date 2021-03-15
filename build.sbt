@@ -16,8 +16,8 @@ inThisBuild(Seq(
 
   usePgpKeyHex("E362921A4CE8BD97916B06CEC6DDC7B1869C9349"),
 
-  sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
   sonatypeCredentialHost:= "s01.oss.sonatype.org",
+  sonatypeRepository := s"https://${sonatypeCredentialHost.value}/service/local",
   dynverSonatypeSnapshots := true,
 ))
 
