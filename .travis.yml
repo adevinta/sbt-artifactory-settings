@@ -9,8 +9,8 @@ jdk: oraclejdk11
 
 cache:
   directories:
-    - $HOME/.ivy2/cache
     - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
+    - $HOME/.ivy2/cache
     - $HOME/.sbt/launchers
 
 before_cache:
