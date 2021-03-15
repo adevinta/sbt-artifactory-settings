@@ -22,7 +22,7 @@ install:
   - git fetch --tags
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION clean scalastyle test:scalastyle coverage test coverageReport scripted
+  - sbt ++$TRAVIS_SCALA_VERSION clean headerCheck scalastyle test:scalastyle coverage test coverageReport scripted
 
 before_deploy:
   - if [ $TRAVIS_PULL_REQUEST = 'false' ]; then

@@ -11,12 +11,15 @@ inThisBuild(Seq(
   developers := List(Developer("cre-team", "CRE Team", "gp.gt.cre@adevinta.com", url("https://github.com/orgs/adevinta/teams/cre"))),
   scmInfo := Some(ScmInfo(url(s"https://github.com/adevinta/${name.value}"), s"scm:git:git@github.com:adevinta/${name.value}.git")),
 
-  scalaVersion := "2.12.12",
-  sbtPlugin.withRank(KeyRanks.Invisible) := true,
+  organizationName := "Adevinta",
+  startYear := Some(2020),
 
   usePgpKeyHex("E362921A4CE8BD97916B06CEC6DDC7B1869C9349"),
 
   dynverSonatypeSnapshots := true,
+
+  scalaVersion := "2.12.12",
+  sbtPlugin.withRank(KeyRanks.Invisible) := true,
 ))
 
 lazy val root = Project(id = "sbt-artifactory-settings", base = file("."))
