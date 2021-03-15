@@ -16,15 +16,13 @@ inThisBuild(Seq(
 
   usePgpKeyHex("E362921A4CE8BD97916B06CEC6DDC7B1869C9349"),
 
-  sonatypeCredentialHost:= "s01.oss.sonatype.org",
-  sonatypeRepository := s"https://${sonatypeCredentialHost.value}/service/local",
   dynverSonatypeSnapshots := true,
 ))
 
 lazy val root = Project(id = "sbt-artifactory-settings", base = file("."))
   .enablePlugins(SbtPlugin)
   .settings(
-    publishMavenStyle := true,
+    sonatypeCredentialHost := "s01.oss.sonatype.org",
     publishTo := sonatypePublishToBundle.value,
     scriptedBufferLog := false,
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}")
