@@ -2,7 +2,7 @@ import sbt.ScriptedPlugin.autoImport.scriptedBufferLog
 
 inThisBuild(Seq(
   
-  name := "prometheus-datadog-bridge",
+  name := "sbt-artifactory-settings",
   organization := "com.github.adevinta.unicron",
   description := "SBT plugin to manage Artifactory configuration",
   
