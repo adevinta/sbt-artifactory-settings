@@ -1,3 +1,7 @@
+![Maven Central](https://img.shields.io/maven-central/v/com.github.adevinta/sbt-artifactory-settings)
+![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/com.github.adevinta/sbt-artifactory-settings?server=https%3A%2F%2Fs01.oss.sonatype.org)
+![Travis (.com)](https://img.shields.io/travis/com/adevinta/sbt-artifactory-settings)
+
 # sbt-artifactory-settings
 
 SBT plugin to manage Artifactory configuration for Unicron
