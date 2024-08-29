@@ -17,7 +17,6 @@ val mockEnvVars: Unit = {
 }
 
 lazy val root = (project in file("."))
-  .enablePlugins(ArtifactorySettingsPlugin)
   .settings(
     version := "0.1-SNAPSHOT",
     scalaVersion := "2.12.10",
@@ -59,6 +58,7 @@ lazy val root = (project in file("."))
         resolvers.value shouldBe Seq(
           Resolver.mavenLocal,
           "Artifactory Release Libs" at "https://host.com/path/libs-release/",
+          "Artifactory Release Libs Local" at "https://host.com/path/libs-release-local/",
           "Artifactory Snapshot Libs" at "https://host.com/path/libs-snapshot/"
         )
       }
