@@ -18,7 +18,7 @@ inThisBuild(Seq(
 
   dynverSonatypeSnapshots := true,
 
-  scalaVersion := "2.12.12",
+  scalaVersion := "2.12.19",
   sbtPlugin.withRank(KeyRanks.Invisible) := true,
 ))
 
