@@ -3,7 +3,7 @@
 
 # sbt-artifactory-settings
 
-SBT plugin to manage Artifactory configuration for Unicron
+SBT plugin to manage Artifactory configuration for Scala projects.
 
 ## Getting started
 
@@ -11,12 +11,12 @@ Following you will find how to configure your laptop environment as well as the 
 
 ### Environment configuration
 
-When running Continuous integration in Travis there are some environment variables already provided that this plugin depends on:
+When running continuous integration there are some environment variables already provided that this plugin depends on:
 - `ARTIFACTORY_CONTEXT`: its value will be something like `https://artifactory.mpi-internal.com/artifactory`.
 - `ARTIFACTORY_USER`: With your artifactory user, something like `name.surname@adevinta.com`.
 - `ARTIFACTORY_PWD`: The artifactory token
 
-The idea is to setup your computer in a similar fashion by providing those environment variables.
+The idea is to set up your computer in a similar fashion by providing those environment variables.
 
 If you work with `bash` you'll need to put them in `.bashrc`, while if you work with `zsh` you'll need to modify `.zshrc`:
 
@@ -47,7 +47,10 @@ addSbtPlugin("com.github.adevinta" % "sbt-artifactory-settings" % "<version>")
 
 `build.sbt`:
 
-This is where the project build is configured. You will need to enable the artifactory plugin in the project containing the Scala code for Spark like:
+As of version 0.4 this is an auto-plugin and the settings of this plugin will be automatically applied to every project
+in your `build.sbt`.
+
+Before version 0.4, you have to enable the artifactory plugin in every project that contains Scala code as follows:
 ```scala
 lazy val root = Project(id = "my-project", base = file("."))
   .enablePlugins(ArtifactorySettingsPlugin)
